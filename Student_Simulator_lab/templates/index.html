@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dynamic Student Simulator Lab</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Adaptive English MCQ tester</p>
+          <h1>Dynamic Student Simulator Lab</h1>
+        </div>
+        <div class="source-pill" id="sourcePath">Loading simulator...</div>
+      </header>
+
+      <main class="workspace">
+        <aside class="question-browser panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Question bank</p>
+              <h2>Questions</h2>
+            </div>
+            <span id="questionCount" class="count-pill">0</span>
+          </div>
+          <label class="field">
+            <span>Search</span>
+            <input id="searchBox" type="search" placeholder="Question, topic, QID">
+          </label>
+          <label class="field">
+            <span>Topic</span>
+            <select id="topicFilter">
+              <option value="">All topics</option>
+            </select>
+          </label>
+          <div class="question-list" id="questionList"></div>
+        </aside>
+
+        <section class="center-stage">
+          <section class="panel control-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Student profile</p>
+                <h2>Ability <span id="abilityLabel">20</span></h2>
+              </div>
+              <button class="ghost-button" id="resetStateButton" type="button">Reset state</button>
+            </div>
+
+            <div class="ability-grid">
+              <input id="abilityRange" type="range" min="10" max="30" step="1" value="20" aria-label="Ability">
+              <label class="number-field">
+                <span>10-30</span>
+                <input id="abilityNumber" type="number" min="10" max="30" step="1" value="20">
+              </label>
+            </div>
+
+            <div class="mode-row">
+              <label class="toggle">
+                <input id="statefulToggle" type="checkbox">
+                <span>Update confidence/fatigue after each run</span>
+              </label>
+              <div class="mini-state" id="miniState">Independent random trials</div>
+            </div>
+          </section>
+
+          <section class="panel question-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow" id="selectedMeta">Select a question</p>
+                <h2 id="selectedTitle">Question details</h2>
+              </div>
+              <div class="button-row">
+                <button class="primary-button" id="simulateButton" type="button">Run simulation</button>
+                <button class="secondary-button" id="compareButton" type="button">Compare abilities</button>
+              </div>
+            </div>
+
+            <p class="question-text" id="questionText">Choose a question from the list to begin.</p>
+            <div class="option-grid" id="optionGrid"></div>
+          </section>
+
+          <section class="panel result-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Latest sampled behavior</p>
+                <h2>Result</h2>
+              </div>
+              <span class="run-chip" id="runChip">No run yet</span>
+            </div>
+            <div class="empty-state" id="emptyResult">
+              Pick an ability and question, then run the simulator.
+            </div>
+            <div class="result-content hidden" id="resultContent">
+              <div class="metric-strip" id="metricStrip"></div>
+              <div class="distribution" id="distribution"></div>
+            </div>
+          </section>
+        </section>
+
+        <aside class="analysis-column">
+          <section class="panel compare-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Same question, many abilities</p>
+                <h2>Comparison</h2>
+              </div>
+              <span class="count-pill" id="compareCount">0</span>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Ability</th>
+                    <th>Mode</th>
+                    <th>Option</th>
+                    <th>Correct</th>
+                    <th>Time</th>
+                    <th>Perceived</th>
+                    <th>Effective</th>
+                  </tr>
+                </thead>
+                <tbody id="compareBody">
+                  <tr>
+                    <td colspan="7" class="empty-cell">Press compare to sample abilities 10-30.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="panel history-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Recent trials</p>
+                <h2>Run history</h2>
+              </div>
+            </div>
+            <div class="history-list" id="historyList">
+              <div class="empty-state compact">No simulations yet.</div>
+            </div>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>
