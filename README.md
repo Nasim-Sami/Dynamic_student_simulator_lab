@@ -224,7 +224,6 @@ This repository is licensed under the [MIT License](LICENSE). Open for research 
 
 ## 🙋 Questions?
 
-- **How realistic is this?** — Validated against real student data; matches actual variability
 - **Can I use real questions?** — Yes, just add to the question bank in `dynamic_student_simulator.py`
 - **How fast is it?** — Single simulation: ~1ms; suitable for batch runs
 - **Can I train on simulator output?** — Yes! Many RL papers do this (e.g., DeepMind's Student ModelRL)
