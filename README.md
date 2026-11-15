@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Flask](https://img.shields.io/badge/Web_App-Flask-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
 [![NumPy](https://img.shields.io/badge/Scientific-NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
 [![Modeling](https://img.shields.io/badge/Modeling-Stochastic%20%26%20Elo-4B8BBE?style=for-the-badge)](https://github.com/Nasim-Sami/Dynamic_student_simulator_lab)
