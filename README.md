@@ -1,6 +1,17 @@
 # 🎓 Dynamic Student Simulator Lab
 
-A web-based laboratory for testing and visualizing **realistic student behavior** in response to English MCQ questions. This simulator models how students with different ability levels perceive difficulty, choose answers, perform under pressure, and learn over time.
+<div align="center">
+
+[![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Web_App-Flask-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![NumPy](https://img.shields.io/badge/Scientific-NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
+[![Modeling](https://img.shields.io/badge/Modeling-Stochastic%20%26%20Elo-4B8BBE?style=for-the-badge)](https://github.com/Nasim-Sami/Dynamic_student_simulator_lab)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+[![Developer](https://img.shields.io/badge/Developer-Nasim--Sami-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Nasim-Sami)
+
+**A web-based simulation laboratory modeling realistic, stochastic student cognitive behavior, perception of difficulty, exam pressure, and Elo-style dynamic learning curves in response to MCQ assessments.**
+
+</div>
 
 ## 🎯 What It Does
 
@@ -199,9 +210,17 @@ For improvements:
 2. Validate against expected distributions
 3. Push to `main` — Render auto-deploys
 
+## 👤 Author
+
+**Nasim Sami**  
+- **GitHub:** [@Nasim-Sami](https://github.com/Nasim-Sami)  
+- **Interests:** Cognitive Modeling, Reinforcement Learning, Adaptive Education Technology.
+
+---
+
 ## 📄 License
 
-Educational and research use.
+This repository is licensed under the [MIT License](LICENSE). Open for research and educational purposes.
 
 ## 🙋 Questions?
 
